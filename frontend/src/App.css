@@ -1,0 +1,79 @@
+
+.lpcontainer{
+  height:100vh;
+  width:100vw;
+   
+  background-size: cover;
+ 
+}
+
+.navHeader{
+  
+  font-weight: bolder;
+  font-size: 30px;
+  padding:20px 0 0 25px;
+  font-family:serif;
+
+}
+.navlist{
+  
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  gap:10px;
+  padding:20px 10px 0 0;
+  cursor:pointer;
+  
+}
+
+nav{
+  display:flex;
+  justify-content: space-between;
+  padding: 5px 10px 0 10px;
+  
+}
+
+.landingcontain{
+  
+  padding:150px 0 0 25px;
+  font-size: 30px;
+}
+
+.btn{
+  margin-top: 10px;
+  font-size:20px;
+   background-color:#FF9839;
+   width:fit-content;
+   text-decoration: none;
+   border-radius: 5px;
+   padding: 5px;
+}
+
+.leftPanel{
+  margin-top: 100px;
+  padding-left: 80px;
+  transform: scale(0.90);
+}
+
+.meetContainer{
+  padding: 5px 10px 0 10px;
+  display: flex;
+  gap:40px;
+  align-items: center;
+}
+
+.rightPanel img{
+  width:600px;
+  margin-top: 20px;
+}
+
+.bg{
+  width:100vw;
+  height:100vh;
+  background-image: url("https://images.unsplash.com/photo-1558865869-c93f6f8482af?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  
+}

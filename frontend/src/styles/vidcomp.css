@@ -1,0 +1,73 @@
+.meetcontainer{
+    position:relative;
+    height:100vh;
+    background-color: #064f59;
+    
+}
+.btncontainer{
+     position: absolute;
+     width:100vw;
+     bottom:0;
+     text-align: center;
+     
+     
+}
+
+.btncontainer svg{
+    font-size: 35px;
+     
+}
+
+.meetuservid{
+    position: absolute;
+    height:200px;
+    width:300px;
+    left:0;
+    bottom:10vh;
+    border-radius: 10px;
+    object-fit: cover;
+   
+}
+.conferenceview{
+
+    display: flex;
+    gap:10px;
+}
+.confvid{
+     height:200px;
+    width:200px;
+    
+}
+
+.conferenceview  video{
+    width:40vw;
+    min-width:30vw;
+    height:50vh;
+   border-radius: 10px;
+    object-fit: cover;
+}
+.chatroom{
+    position: absolute;
+    right:0;
+    height:90vh;
+    background-color: #FF9839;
+    width:30vw;
+    border-radius: 10px;
+    bottom:10vh;
+    padding:0 20px 0 10px;
+}
+.chatcontainer{
+    position: relative;
+    height: 90vh;
+    line-height: 50px;
+}
+
+.chattingarea{
+    bottom:2vh;
+    position: absolute;
+}
+
+.chattingdisplay{
+    line-height: 25px;
+    
+}
