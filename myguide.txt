@@ -1,0 +1,11 @@
+Packages installed:
+express,mongoose,http-status(error codes),bcrypt(encryption for password storage in hash form in db),socket.io
+
+register,login pages made then with basic js
+
+setting up IO backend for connecting,texting,disconnecting call etc..
+
+setting up frontend now....
+
+
+
