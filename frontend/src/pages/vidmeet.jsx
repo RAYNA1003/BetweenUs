@@ -221,9 +221,26 @@ export default function Vidmeetcomponent(){
 
         socketidref.current=socketref.current.id;
         socketref.current.on("chat-message",addMessage);
-        socketref.current.on("user-left",(id)=>{
-            setvideos((videos)=>videos.filter((video)=>video.socketID!==id))
-        });
+       socketref.current.on("user-left",(id)=>{
+    // stop the stream tracks first
+    let leftVideo = vidref.current.find(video => video.socketID === id);
+    if(leftVideo && leftVideo.stream){
+        leftVideo.stream.getTracks().forEach(track => track.stop());
+    }
+
+    // close the peer connection
+    if(connections[id]){
+        connections[id].close();
+        delete connections[id];
+    }
+
+    // update both state and ref
+    setvideos((videos) => {
+        const filtered = videos.filter((video) => video.socketID !== id);
+        vidref.current = filtered;  // ✅ sync the ref too!
+        return filtered;
+    });
+});
          socketref.current.on("user-joined",(id,clients)=>{
             console.log("user-joined fired", id, clients);
             clients.forEach((socketListId)=>{
@@ -478,7 +495,11 @@ export default function Vidmeetcomponent(){
                         data-socket={video.socketID}
                         ref={ref=>{if (ref && video.stream){
                             ref.srcObject=video.stream;
-                        }}} autoPlay>
+                        }else if(ref) {
+            ref.srcObject = null;  // ✅ clear when stream gone
+        }
+                        
+                        }} autoPlay>
 
                         </video>
                     </div>
