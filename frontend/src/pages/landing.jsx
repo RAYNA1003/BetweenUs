@@ -11,7 +11,7 @@ export default function LandingPage(){
                 <div className='navHeader'><span style={{color:"#064f59"}}>Between Us</span> <span style={{fontStyle:'italic',fontSize:15}}> ~Your Video Calling Platform</span></div>
                 <div className='navlist'>
                     <p onClick={()=>{
-                        routeTo(":url");
+                        routeTo("/vyun");
                     }}>Join as Guest</p>
                     <p onClick={()=>{
                          routeTo("/auth");
